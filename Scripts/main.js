@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!valid) return;
 
       var source = form.getAttribute('data-demo-form') || 'form';
-      window.location.href = 'thank-you.html?source=' + encodeURIComponent(source);
+      sessionStorage.setItem('lead_submitted', '1');
+      window.location.href = 'thankyou.html?source=' + encodeURIComponent(source);
     });
 
     // clear error state as the person fixes a field
