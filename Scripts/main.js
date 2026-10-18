@@ -82,4 +82,17 @@ document.addEventListener('DOMContentLoaded', function () {
       thanksMsg.textContent = "We've received your message and will get back to you within one business day.";
     }
   }
+
+  
+  // LinkedIn conversion: SYS.01 service click
+  document.querySelectorAll('a[href="#process-systemization"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof window.lintrk === 'function') {
+        window.lintrk('track', {
+          conversion_id: 32082217
+        });
+      }
+    });
+  });
+
 });
