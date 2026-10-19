@@ -56,15 +56,20 @@
         src="https://www.facebook.com/tr?id=2390829157992481&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18432488557"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18432488557"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'AW-18432488557');
-</script>
+      gtag("config", "AW-18432488557");
+    </script>
 
     <!-- LinkedIn Insights (tag.js) -->
     <script type="text/javascript">
@@ -99,6 +104,30 @@
       />
     </noscript>
 
+    <!-- Chatgpt (tag.js) -->
+    <script>
+      (function (w, d, s, u) {
+        if (w.oaiq) return;
+        var q = function () {
+          q.q.push(arguments);
+        };
+        q.q = [];
+        w.oaiq = q;
+        var js = d.createElement(s);
+        js.async = true;
+        js.src = u;
+        var f = d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(js, f);
+      })(
+        window,
+        document,
+        "script",
+        "https://bzrcdn.openai.com/sdk/oaiq.min.js",
+      );
+      oaiq("init", {
+        pixelId: "<YOUR-PIXEL-ID>",
+      });
+    </script>
   </head>
   <body>
     <header class="site-header">
